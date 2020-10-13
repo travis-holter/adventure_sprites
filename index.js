@@ -1,7 +1,7 @@
 // Setup
 
 // import Player from './scripts/player.js'
-const canvas = document.getElementById('canvas1');
+const canvas = document.getElementById('middle');
 const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 500;
