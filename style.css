@@ -1,8 +1,8 @@
-#middle {
+canvas {
     width: 800px;
     height: 500px;
     border: 1px solid black;
-    background: lightblue;
+    background: transparent;
     position: absolute;
     top: 50%;
     left: 50%;

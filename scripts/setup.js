@@ -1,10 +1,25 @@
 // Setup
 
-// import Player from './scripts/player.js'
-const canvas = document.getElementById('middle');
-const ctx = canvas.getContext('2d');
-canvas.width = 800;
-canvas.height = 500;
+const bottom = document.getElementById('bottom');
+const ctxBottom = bottom.getContext('2d');
+bottom.width = 800;
+bottom.height = 500;
+
+const middle = document.getElementById('middle');
+const ctxMiddle = middle.getContext('2d');
+middle.width = 800;
+middle.height = 500;
+
+const top = document.getElementById('top');
+const ctxTop = top.getContext('2d');
+top.width = 800;
+top.height = 500;
+
+const instructions = document.getElementById('instructions');
+const ctxInstructions = instructions.getContext('2d');
+instructions.width = 800;
+instructions.height = 500;
+
 const keys = [];
 
 // const player = new Player();
@@ -53,7 +68,7 @@ window.addEventListener("keyup", function (e) {
 // Player sprite functions
 
 function drawSprite(img, sX, sY, sW, sH, dX, dY, dW, dH){
-    ctx.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH)
+    ctxMiddle.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH)
 };
 
 function movePlayer() {
@@ -125,8 +140,10 @@ function animate(){
     elapsed = now - then;
     if (elapsed > fpsInterval){
         then = now - (elapsed % fpsInterval);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+        ctxBottom.clearRect(0, 0, middle.width, middle.height);
+        ctxMiddle.clearRect(0, 0, middle.width, middle.height);
+        ctxTop.clearRect(0, 0, middle.width, middle.height);
+        ctxBottom.drawImage(background, 0, 0, middle.width, middle.height);
         drawSprite(playerSprite, player.width * player.frameX, player.height * player.frameY, player.width, player.height, player.x, player.y, player.width, player.height)
         movePlayer();
         handlePlayerFrame();
