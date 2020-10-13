@@ -1,4 +1,4 @@
-import "./styles/index.scss";
+// import "./styles/index.scss";
 import "./images/yoda-stitch.jpg";
 import canvasExample from "./scripts/canvas";
 import Square from "./scripts/square";
