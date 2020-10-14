@@ -1,4 +1,4 @@
-# Spritey
+# Adventure Sprites
 
 ## 1. MVP List
 1. Create Repo and Readme (October 11th)
