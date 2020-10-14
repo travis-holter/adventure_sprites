@@ -19,3 +19,9 @@ footer.width = 800;
 footer.height = 50;
 
 const keys = [];
+var npcs = [];
+
+var stopUp = false;
+var stopRight = false;
+var stopDown = false;
+var stopLeft = false;
