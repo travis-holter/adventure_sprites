@@ -38,6 +38,9 @@ function animate() {
         npcs.forEach(npc => {
             drawSprite(npc.sprite, npc.width * npc.frameX, npc.height * npc.frameY, npc.width, npc.height, npc.x, npc.y, npc.width, npc.height)
         })
+        npcs.forEach(npc => {
+            collision(player, npc)
+        })
         movePlayer();
         handlePlayerFrame();
         updateBackground();
