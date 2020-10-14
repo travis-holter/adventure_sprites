@@ -1,15 +1,3 @@
-// class Player{
-//     constructor(){
-//     this.x = 200;
-//     this.y = 200;
-//     this.width = 32;
-//     this.height = 48;
-//     this.frameX = 0;
-//     this.frameY = 0;
-//     this.speed = 8;
-//     this.moving = false;
-//     };
-
 const player = {
     x: 200,
     y: 200,
@@ -57,7 +45,3 @@ function handlePlayerFrame() {
     if (player.frameX < 3 && player.moving) player.frameX++;
     else player.frameX = 0;
 };
-
-// };
-
-// export default Player;

@@ -1,3 +1,20 @@
+function drawSprite(img, sX, sY, sW, sH, dX, dY, dW, dH) {
+    ctxMiddle.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH)
+};
+
+window.addEventListener("keydown", function (e) {
+    keys[e.key] = true;
+    console.log(keys);
+    if (keys["ArrowUp"] || keys["ArrowRight"] || keys["ArrowDown"] || keys["ArrowLeft"]) {
+        player.moving = true;
+    }
+});
+
+window.addEventListener("keyup", function (e) {
+    delete keys[e.key];
+    player.moving = false;
+});
+
 let fps, fpsInterval, startTime, now, then, elapsed
 function start(fps) {
     fpsInterval = 1000 / fps;
@@ -26,3 +43,15 @@ function animate() {
 }
 
 start(15);
+
+// This is my original animation loop, just keeping it around for refference
+
+// function animate() {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+//     drawSprite(playerSprite, player.width * player.frameX, player.height * player.frameY, player.width, player.height, player.x, player.y, player.width, player.height)
+//     movePlayer();
+//     handlePlayerFrame();
+//     requestAnimationFrame(animate);
+// }
+// animate();
