@@ -19,3 +19,4 @@ footer.width = 800;
 footer.height = 50;
 
 const keys = [];
+var npcs = [];

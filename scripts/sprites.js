@@ -1,3 +1,5 @@
+const playerSprite = new Image();
+playerSprite.src = './images/blackmage_m.png';
 const player = {
     x: 200,
     y: 200,
@@ -9,8 +11,19 @@ const player = {
     moving: false,
 };
 
-const playerSprite = new Image();
-playerSprite.src = './images/blackmage_m.png';
+const darkKnightSprite = new Image();
+darkKnightSprite.src = './images/darkknight.png';
+const darkKnight = {
+    x: 500,
+    y: 325,
+    width: 32,
+    height: 48,
+    frameX: 0,
+    frameY: 0,
+    speed: 6,
+    moving: false,
+    sprite: darkKnightSprite,
+}
 
 function movePlayer() {
     if (keys["Shift"]) {

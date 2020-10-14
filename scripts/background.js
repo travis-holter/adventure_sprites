@@ -16,6 +16,7 @@ function updateBackground() {
         bg.top = 300;
         player.y = 400;
         player.x = 10;
+        npcs = [darkKnight];
     }
     if (player.x <= 1 && bg.map === 'firecave2') {
         background.src = './images/background.png';
@@ -23,5 +24,6 @@ function updateBackground() {
         bg.top = 150;
         player.y = 400;
         player.x = 790 - player.width;
+        npcs = [];
     }
 };

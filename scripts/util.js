@@ -35,6 +35,9 @@ function animate() {
         ctxFooter.clearRect(0, 0, footer.width, footer.height);
         ctxBottom.drawImage(background, 0, 0, middle.width, middle.height);
         drawSprite(playerSprite, player.width * player.frameX, player.height * player.frameY, player.width, player.height, player.x, player.y, player.width, player.height)
+        npcs.forEach(npc => {
+            drawSprite(npc.sprite, npc.width * npc.frameX, npc.height * npc.frameY, npc.width, npc.height, npc.x, npc.y, npc.width, npc.height)
+        })
         movePlayer();
         handlePlayerFrame();
         updateBackground();
