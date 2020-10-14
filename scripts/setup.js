@@ -15,10 +15,10 @@ const ctxTop = top.getContext('2d');
 top.width = 800;
 top.height = 500;
 
-const instructions = document.getElementById('instructions');
-const ctxInstructions = instructions.getContext('2d');
-instructions.width = 800;
-instructions.height = 500;
+const footer = document.getElementById('footer');
+const ctxFooter = footer.getContext('2d');
+footer.width = 800;
+footer.height = 50;
 
 const keys = [];
 
@@ -45,7 +45,20 @@ const bg = {
 const playerSprite = new Image();
 playerSprite.src = './images/blackmage_m.png';
 const background = new Image();
-background.src = './images/background.png'
+background.src = './images/background.png';
+const face = new Image();
+face.src = './images/blm_face.png';
+let message = "Hold 'Shift' to run!";
+
+
+// Footer functions
+
+function updateFooter(){
+    ctxFooter.font = "18px Arial";
+    ctxFooter.fillText(message, 60, 25);
+    ctxFooter.drawImage(face, 0, 0, 50, 50);
+
+};
 
 
 // Event listeners
@@ -140,14 +153,16 @@ function animate(){
     elapsed = now - then;
     if (elapsed > fpsInterval){
         then = now - (elapsed % fpsInterval);
-        ctxBottom.clearRect(0, 0, middle.width, middle.height);
+        ctxBottom.clearRect(0, 0, bottom.width, bottom.height);
         ctxMiddle.clearRect(0, 0, middle.width, middle.height);
-        ctxTop.clearRect(0, 0, middle.width, middle.height);
+        ctxTop.clearRect(0, 0, top.width, top.height);
+        ctxFooter.clearRect(0, 0, footer.width, footer.height);
         ctxBottom.drawImage(background, 0, 0, middle.width, middle.height);
         drawSprite(playerSprite, player.width * player.frameX, player.height * player.frameY, player.width, player.height, player.x, player.y, player.width, player.height)
         movePlayer();
         handlePlayerFrame();
         updateBackground();
+        updateFooter();
     }
 }
 
