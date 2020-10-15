@@ -1,5 +1,7 @@
 # Adventure Sprites
 
+![image](https://user-images.githubusercontent.com/53350595/96130557-f4410e00-0eac-11eb-831b-fa48a78734fd.png)
+
 ## 1. MVP List
 1. Create Repo and Readme (October 11th)
 2. Implement Canvas and sprites (October 12th)
