@@ -1,5 +1,5 @@
 const face = new Image();
-face.src = './images/blm_face.png';
+face.src = '../images/blm_face.png';
 let message = "Hold 'Shift' to run!";
 
 function updateFooter() {

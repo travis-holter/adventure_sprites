@@ -8,6 +8,24 @@ window.addEventListener("keydown", function (e) {
     if (keys["ArrowUp"] || keys["ArrowRight"] || keys["ArrowDown"] || keys["ArrowLeft"]) {
         player.moving = true;
     }
+    npcs.forEach(npc => {
+        let playerLongest;
+        if(player.width > player.height){
+            playerLongest = player.width;
+        }else{
+            playerLongest = player.height;
+        }
+        let npcLongest;
+        if(npc.width > npc.height){
+            npcLongest = npc.width;
+        }else{
+            npcLongest = npc.height;
+        }
+        if(Math.abs(player.x - npc.x) <= npcLongest + playerLongest + 5 &&
+            keys[" "]){
+                npc.talked = true;
+            }
+    })
 });
 
 window.addEventListener("keyup", function (e) {
@@ -44,6 +62,7 @@ function animate() {
         movePlayer();
         handlePlayerFrame();
         updateBackground();
+        updateStory();
         updateFooter();
     }
 }
