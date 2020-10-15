@@ -10,10 +10,10 @@ const player = {
     speed: 8,
     moving: false,
 };
-
 const darkKnightSprite = new Image();
 darkKnightSprite.src = './images/darkknight.png';
 const darkKnight = {
+    talked: false,
     x: 500,
     y: 400,
     width: 32,
@@ -23,7 +23,21 @@ const darkKnight = {
     speed: 6,
     moving: false,
     sprite: darkKnightSprite,
-}
+};
+const darthVaderSprite = new Image();
+darthVaderSprite.src = './images/darthvader.png';
+const darthVader = {
+    talked: false,
+    x: 120,
+    y: 310,
+    width: 32,
+    height: 48,
+    frameX: 0,
+    frameY: 1,
+    speed: 6,
+    moving: false,
+    sprite: darthVaderSprite,
+};
 
 function movePlayer() {
     if (keys["Shift"]) {
