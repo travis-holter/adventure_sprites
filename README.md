@@ -5,7 +5,7 @@
 ## 1. MVP List
 1. Create Repo and Readme (October 11th)
 2. Implement Canvas and sprites (October 12th)
-  - [ ] Users can move around the screen with a sprite
+  - [x] Users can move around the screen with a sprite
 3. Interacting with events makes images and story appear in a new screen (October 13th)
   - [ ] The user will be able to press a button (spacebar) in certain locations to find pieces of the story
 4. Conditionals and storytelling (October 14th)
@@ -21,5 +21,4 @@
   * Webpack 
 ## 3. Wireframe Model
 
-https://wireframe.cc/7kHuFq
-
+![image](https://user-images.githubusercontent.com/53350595/96130858-5437b480-0ead-11eb-9a83-e5d98c5b24d1.png)
