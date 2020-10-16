@@ -25,9 +25,9 @@ function updateBackground() {
         player.y = 400;
         player.x = 790 - player.width;
         if(checkPoint1){
-            npcs = [darthVader];
+            npcs = [bigRock, darthVader];
         }else{
-            npcs = [];
+            npcs = [bigRock];
         }
     }
 };
