@@ -39,12 +39,12 @@ const darthVader = {
     sprite: darthVaderSprite,
 };
 const bigRockSprite = new Image();
-bigRockSprite.src = './images/blank.png';
+bigRockSprite.src = './images/dumb.png';
 const bigRock = {
-    x: 60,
-    y: 150,
-    width: 160,
-    height: 55,
+    x: 0,
+    y: 0,
+    width: 210,
+    height: 210,
     frameX: 0,
     frameY: 0,
     speed: 8,
@@ -98,14 +98,18 @@ function collision (first, second){
         if (wy > hx){
             if (wy > -hx){
                 stopUp = true;
+                console.log('collision: up');
             }else{
                 stopRight = true;
+                console.log('collision: right');
             }
         }else{
             if (wy > -hx){
                 stopLeft = true;
-            }else{
+                console.log('collision: left');
+            } else {
                 stopDown = true;
+                console.log('collision: down');
             };
         };
     }else{

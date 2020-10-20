@@ -7,11 +7,13 @@ function updateStory(){
         darkKnight.talked = false;
     }
     if(bg.map === "firecave2" && !checkPoint1){
-        message = "Talk to people with Space Bar";
+        message1 = "Talk to people with Space Bar";
+        message2 = "";
         face.src = '../images/blm_face.png';
     }
     else if (checkPoint1){
-        message = "You should go find Darh Vader, I hear he likes to hang out by the cliffs.";
+        message1 = "You should go find Darth Vader, I hear he likes to hang out by the cliffs.";
+        message2 = "";
         face.src = "../images/drk_face.png";
     }
 }
