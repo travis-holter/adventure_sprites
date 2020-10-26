@@ -39,7 +39,7 @@ const darthVader = {
     sprite: darthVaderSprite,
 };
 const bigRockSprite = new Image();
-bigRockSprite.src = './images/dumb.png';
+bigRockSprite.src = './images/blank.png';
 const bigRock = {
     x: 0,
     y: 0,
